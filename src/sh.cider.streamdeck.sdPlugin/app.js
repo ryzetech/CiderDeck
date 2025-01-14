@@ -190,6 +190,12 @@ Object.keys(actions).forEach(actionKey => {
         action.onTouchTap(() => {
             console.debug(`[DEBUG] [Action] ciderPlaybackAction touch tapped`);
             switch (window.tapBehavior) {
+                case 'togglePlay':
+                    comRPC("POST", "playpause");
+                    setTimeout(() => {
+                        comRPC("GET", "now-playing").then(data => setData(data));
+                    }, 1000);
+                    break;
                 case 'addToLibrary':
                     addToLibrary();
                     break;
