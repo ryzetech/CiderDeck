@@ -27,8 +27,6 @@ Using CiderDeck you can do the following
 - Stream Deck (MK.1, MK.2, SD+, XL)
 - Computer running Windows or macOS
 
-## Installation Guide
-
-Go into the [Releases](https://github.com/ciderapp/CiderDeck/releases) and download the latest compiled plugin file, double click to open it in the Stream Deck software for installation.
-
-Done!
+## Changes in this fork
+- modified tap behavior to accept play/pause requests instead of clicking the dial
+  - did this to make toggling playback possible when using a dial stack
